@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from "./../../assets/logo_transparent.png"
+import logo from "../../assets/logo_transparent.png"
 import "../card/Card.css"
 import Input from '../input/Input'
 import BtnDownload from '../button/BtnDownload'
