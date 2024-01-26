@@ -1,0 +1,90 @@
+.btn-content button {
+    position: relative;
+    background: #9599E2;
+    color: #9599E2;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 10px 45px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.btn-content button:hover {
+    letter-spacing: 0.25em;
+    background: #0093E9;
+    color: #0093E9;
+
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.btn-content button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #2B2D32;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.btn-content button span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-content button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.btn-content button i::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 15px;
+    height: 4px;
+    background: #2B2D32;
+    transform: translateX(-50%) skewX(310deg);
+    transition: 0.5s;
+
+}
+
+.btn-content button:hover i::before {
+    width: 30px;
+    left: 20%;
+}
+
+.btn-content button i::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 15px;
+    height: 4px;
+    background: #2B2D32;
+    transform: translateX(-50%) skewX(310deg);
+    transition: 0.5s;
+
+}
+
+.btn-content button:hover i::after {
+    width: 30px;
+    left: 80%;
+}
+
+.btn-content .btn-disabled {
+
+    opacity: 0.2;
+    cursor: wait;
+
+}

@@ -1,0 +1,121 @@
+.card {
+    /* background-color: #0093E9; */
+    /* background-image: linear-gradient(160deg, #0093E9 0%, #9599E2 100%); */
+    background: #212529;
+    position: relative;
+    height: 60vh;
+    width: 40vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 60vh;
+    width: 40vh;
+    background-image: linear-gradient(0deg, transparent 0%, #0093E9, #0093E9);
+    transform-origin: bottom right;
+    animation: animate360 8s linear infinite;
+    filter: blur(20px);
+
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 60vh;
+    width: 40vh;
+    background-image: linear-gradient(0deg, transparent, #9599E2, #9599E2);
+    transform-origin: bottom right;
+    animation: animate360 8s linear infinite;
+    animation-delay: -4s;
+    filter: blur(20px);
+
+}
+
+@keyframes animate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.body {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    inset: 3px;
+    border-radius: 20px;
+    background: #2B2D32;
+    z-index: 10;
+    padding-bottom: 110px;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+
+}
+
+.logo img {
+    width: 40%;
+}
+
+.logo h2 {
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    gap: 110px;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .card {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .body {
+        border-radius: 7px;
+        padding-bottom: 100px;
+
+
+    }
+
+    .form {
+        gap: 170px;
+    }
+
+    .logo img {
+        width: 35%;
+    }
+
+
+}
